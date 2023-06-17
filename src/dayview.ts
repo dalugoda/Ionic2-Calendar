@@ -17,6 +17,7 @@ import {
     NgZone
 } from '@angular/core';
 import {Subscription} from 'rxjs';
+import { SwiperComponent } from 'swiper/angular';
 
 import {
     ICalendarComponent,
@@ -406,7 +407,7 @@ export class DayViewComponent implements ICalendarComponent, OnInit, OnChanges, 
     }
 
     @HostBinding('class.dayview') class = true;
-    @ViewChild('swiper', { static: false }) slider!: any;
+    @ViewChild('swiper', { static: false }) slider!: SwiperComponent;
 
     @Input() dayviewAllDayEventTemplate!: TemplateRef<IDisplayAllDayEvent>;
     @Input() dayviewNormalEventTemplate!: TemplateRef<IDisplayEvent>;
