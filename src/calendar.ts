@@ -4,6 +4,7 @@ import { CalendarService } from './calendar.service';
 import SwiperCore from 'swiper';
 import { IonicSlides } from '@ionic/angular';
 import { IEvent, CalendarMode, QueryMode, Step, IMonthViewDisplayEventTemplateContext, IMonthViewEventDetailTemplateContext, IDisplayWeekViewHeader, IDisplayAllDayEvent, IDisplayEvent, IWeekViewAllDayEventSectionTemplateContext, IDayViewAllDayEventSectionTemplateContext, IWeekViewNormalEventSectionTemplateContext, IDayViewNormalEventSectionTemplateContext, IDateFormatter, IRange, ITimeSelected } from './calendar.interface';
+import { register } from 'swiper/element/bundle';
 
 SwiperCore.use([IonicSlides]);
 
@@ -292,6 +293,7 @@ export class CalendarComponent implements OnInit {
     }
 
     ngOnInit() {
+        register();
         if (this.autoSelect) {
             if (this.autoSelect.toString() === 'false') {
                 this.autoSelect = false;

@@ -17,7 +17,6 @@ import {
     NgZone
 } from '@angular/core';
 import {Subscription} from 'rxjs';
-import { SwiperComponent } from 'swiper/angular';
 
 import type {
     ICalendarComponent,
@@ -508,7 +507,7 @@ export class WeekViewComponent implements ICalendarComponent, OnInit, OnChanges,
     }
 
     @HostBinding('class.weekview') class = true;
-    @ViewChild('swiper', { static: false }) slider!: SwiperComponent;
+    @ViewChild('swiper', { static: false }) slider!: any;
 
     @Input() weekviewHeaderTemplate!: TemplateRef<IDisplayWeekViewHeader>;
     @Input() weekviewAllDayEventTemplate!: TemplateRef<IDisplayAllDayEvent>;

@@ -14,7 +14,6 @@ import {
 } from '@angular/core';
 import {Subscription} from 'rxjs';
 import {DatePipe} from '@angular/common';
-import {SwiperComponent} from 'swiper/angular';
 
 import {ICalendarComponent, IEvent, IMonthView, IMonthViewRow, ITimeSelected, IRange, CalendarMode, IDateFormatter, IMonthViewDisplayEventTemplateContext} from './calendar.interface';
 import {CalendarService} from './calendar.service';
@@ -241,7 +240,7 @@ export class MonthViewComponent implements ICalendarComponent, OnInit, OnDestroy
 
     constructor(private calendarService: CalendarService, private zone:NgZone) {
     }  
-    @ViewChild('swiper', { static: false }) slider!: SwiperComponent;
+    @ViewChild('swiper', { static: false }) slider!: any;
 
     @Input() monthviewDisplayEventTemplate!: TemplateRef<IMonthViewDisplayEventTemplateContext>;
     @Input() monthviewInactiveDisplayEventTemplate!: TemplateRef<IMonthViewDisplayEventTemplateContext>;
