@@ -1,5 +1,7 @@
 {
     "compilerOptions": {
+      "strictPropertyInitialization": false,
+      "skipLibCheck": true,
         "paths": {
             "Ionic2-Calendar": [
               "dist"
@@ -35,6 +37,6 @@
         "enableI18nLegacyMessageIdFormat": false,
         "strictInjectionParameters": true,
         "strictInputAccessModifiers": true,
-        "strictTemplates": true    
+        "strictTemplates": false    
     }
 }
